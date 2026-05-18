@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INC Code of Ethics & Professional Conduct | Nursing Study Guide</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap');
+
+  :root {
+    --navy: #0f1b2d;
+    --deep: #152238;
+    --card: #1a2d47;
+    --accent: #c9a84c;
+    --gold-light: #e8c97a;
+    --red: #e03b3b;
+    --teal: #2eb8a4;
+    --blue: #4a9fd4;
+    --text: #e8e4d8;
+    --muted: #8fa3b8;
+    --border: rgba(201,168,76,0.25);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--navy);
+    color: var(--text);
+    font-family: 'Source Serif 4', serif;
+    font-size: 16px;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  header {
+    background: linear-gradient(135deg, #0a1520 0%, #1a2d47 60%, #0f1b2d 100%);
+    border-bottom: 2px solid var(--accent);
+    padding: 40px 24px 32px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.12) 0%, transparent 70%);
+  }
+  .badge {
+    display: inline-block;
+    background: rgba(201,168,76,0.15);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    padding: 5px 16px;
+    border-radius: 2px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 5vw, 42px);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    position: relative;
+  }
+  h1 span { color: var(--accent); }
+  .subtitle {
+    color: var(--muted);
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-style: italic;
+  }
+
+  /* NAV TABS */
+  .tab-nav {
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    background: var(--deep);
+    border-bottom: 1px solid var(--border);
+    padding: 0 16px;
+    scrollbar-width: none;
+  }
+  .tab-nav::-webkit-scrollbar { display: none; }
+  .tab-btn {
+    padding: 14px 20px;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: var(--muted);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.25s;
+    text-transform: uppercase;
+  }
+  .tab-btn:hover { color: var(--text); }
+  .tab-btn.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+    background: rgba(201,168,76,0.05);
+  }
+
+  /* CONTENT */
+  .content { display: none; padding: 24px 16px 60px; max-width: 900px; margin: 0 auto; }
+  .content.active { display: block; animation: fadeIn 0.3s ease; }
+
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* SECTION CARD */
+  .section-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .section-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: var(--accent);
+  }
+  .section-card.teal::before { background: var(--teal); }
+  .section-card.red::before { background: var(--red); }
+  .section-card.blue::before { background: var(--blue); }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-title.teal { color: var(--teal); }
+  .section-title.red { color: var(--red); }
+  .section-title.blue { color: var(--blue); }
+  .section-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    background: rgba(201,168,76,0.15);
+    border: 1px solid var(--border);
+    padding: 2px 8px;
+    border-radius: 20px;
+    color: var(--muted);
+    letter-spacing: 1px;
+  }
+  .section-sub {
+    color: var(--muted);
+    font-size: 13px;
+    font-style: italic;
+    margin-bottom: 16px;
+  }
+
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: var(--gold-light);
+    margin: 18px 0 8px;
+  }
+
+  p { color: var(--text); margin-bottom: 10px; font-size: 15px; }
+
+  ul, ol { padding-left: 22px; margin-bottom: 12px; }
+  li { margin-bottom: 6px; font-size: 15px; color: var(--text); }
+  li strong { color: var(--gold-light); }
+
+  /* HIGHLIGHT BOXES */
+  .highlight {
+    background: rgba(201,168,76,0.08);
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin: 14px 0;
+    font-size: 14px;
+  }
+  .highlight.teal {
+    background: rgba(46,184,164,0.08);
+    border-color: rgba(46,184,164,0.3);
+  }
+  .highlight.red {
+    background: rgba(224,59,59,0.08);
+    border-color: rgba(224,59,59,0.3);
+  }
+  .highlight.blue {
+    background: rgba(74,159,212,0.08);
+    border-color: rgba(74,159,212,0.3);
+  }
+  .highlight-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 6px;
+    display: block;
+  }
+  .highlight.teal .highlight-label { color: var(--teal); }
+  .highlight.red .highlight-label { color: var(--red); }
+  .highlight.blue .highlight-label { color: var(--blue); }
+
+  /* PRINCIPLE GRID */
+  .principle-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 14px;
+    margin: 14px 0;
+  }
+  .principle-box {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 16px;
+  }
+  .principle-box .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--accent);
+    opacity: 0.6;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .principle-box h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    color: var(--gold-light);
+    margin-bottom: 6px;
+  }
+  .principle-box p { font-size: 13px; color: var(--muted); margin: 0; }
+
+  /* TABLE */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 14px;
+  }
+  th {
+    background: rgba(201,168,76,0.15);
+    color: var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  td {
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    color: var(--text);
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: rgba(255,255,255,0.02); }
+
+  /* EXAM ALERT */
+  .exam-alert {
+    background: rgba(224,59,59,0.1);
+    border: 1px solid rgba(224,59,59,0.4);
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin: 14px 0;
+  }
+  .exam-alert .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .exam-alert p { font-size: 14px; margin: 0; }
+
+  /* MEMORY AID */
+  .memory-aid {
+    background: rgba(74,159,212,0.1);
+    border: 1px solid rgba(74,159,212,0.35);
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin: 14px 0;
+  }
+  .memory-aid .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--blue);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .acronym {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: var(--accent);
+    letter-spacing: 4px;
+    margin-bottom: 8px;
+  }
+  .acronym-expand { font-size: 13px; color: var(--muted); }
+  .acronym-expand span { color: var(--gold-light); font-weight: 600; }
+
+  /* DIVIDER */
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 20px 0;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    .principle-grid { grid-template-columns: 1fr; }
+    .tab-btn { padding: 12px 14px; font-size: 11px; }
+    .section-card { padding: 18px 14px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="badge">ABVMU · Sem 4 · Nursing Ethics</div>
+  <h1>INC <span>Code of Ethics</span> &<br>Professional Conduct</h1>
+  <p class="subtitle">Complete Study Guide — Every Concept Covered</p>
+</header>
+
+<nav class="tab-nav">
+  <button class="tab-btn active" onclick="showTab('overview')">Overview</button>
+  <button class="tab-btn" onclick="showTab('ethics')">Code of Ethics</button>
+  <button class="tab-btn" onclick="showTab('conduct')">Professional Conduct</button>
+  <button class="tab-btn" onclick="showTab('principles')">Ethical Principles</button>
+  <button class="tab-btn" onclick="showTab('violations')">Violations & Misc</button>
+  <button class="tab-btn" onclick="showTab('mcq')">Exam MCQs</button>
+</nav>
+
+<!-- ===== OVERVIEW ===== -->
+<div class="content active" id="tab-overview">
+
+  <div class="section-card">
+    <div class="section-title">What is INC?</div>
+    <p class="section-sub">Indian Nursing Council — The Apex Body</p>
+    <p>The <strong>Indian Nursing Council (INC)</strong> is a statutory body established under the <strong>Indian Nursing Council Act, 1947</strong>. It is the apex regulatory body that governs nursing education and practice across India.</p>
+    <h3>Key Functions of INC</h3>
+    <ul>
+      <li>Prescribes standards for nursing education</li>
+      <li>Registers nurses at national level</li>
+      <li>Maintains uniform standards of nursing practice</li>
+      <li>Lays down <strong>Code of Ethics</strong> and <strong>Code of Professional Conduct</strong></li>
+      <li>Recognizes nursing institutions across India</li>
+    </ul>
+    <div class="highlight">
+      <span class="highlight-label">Key Fact</span>
+      INC was constituted in <strong>1949</strong> under the Indian Nursing Council Act 1947. Headquarters: <strong>New Delhi</strong>.
+    </div>
+  </div>
+
+  <div class="section-card teal">
+    <div class="section-title teal">Two Key Documents</div>
+    <div class="principle-grid">
+      <div class="principle-box">
+        <div class="num">01</div>
+        <h4>Code of Ethics</h4>
+        <p>A set of moral principles that guide nurses in making ethical decisions and maintaining standards of moral behavior in professional practice.</p>
+      </div>
+      <div class="principle-box">
+        <div class="num">02</div>
+        <h4>Code of Professional Conduct</h4>
+        <p>Specific rules and behavioral standards that define what is expected of registered nurses in their professional role and interactions.</p>
+      </div>
+    </div>
+    <div class="exam-alert">
+      <div class="label">⚠ Exam Distinction</div>
+      <p>Code of Ethics = MORAL principles (values/beliefs). Code of Conduct = BEHAVIORAL rules (what to do/not do). Both are published by INC and ICN.</p>
+    </div>
+  </div>
+
+  <div class="section-card blue">
+    <div class="section-title blue">ICN vs INC — Know the Difference</div>
+    <table>
+      <tr><th>Feature</th><th>ICN</th><th>INC</th></tr>
+      <tr><td>Full Form</td><td>International Council of Nurses</td><td>Indian Nursing Council</td></tr>
+      <tr><td>Founded</td><td>1899</td><td>1947 (Act), 1949 (constituted)</td></tr>
+      <tr><td>Scope</td><td>Global / International</td><td>National (India)</td></tr>
+      <tr><td>HQ</td><td>Geneva, Switzerland</td><td>New Delhi, India</td></tr>
+      <tr><td>Role</td><td>Global nursing standards</td><td>Indian nursing regulation</td></tr>
+    </table>
+    <div class="highlight blue">
+      <span class="highlight-label">Remember</span>
+      INC follows ICN guidelines and adapts them for Indian context. ABVMU exam may ask about both — always clarify which one.
+    </div>
+  </div>
+
+</div>
+
+<!-- ===== CODE OF ETHICS ===== -->
+<div class="content" id="tab-ethics">
+
+  <div class="section-card">
+    <div class="section-title"><span class="section-num">UNIT</span> Code of Ethics — Full Coverage</div>
+    <p class="section-sub">Moral framework governing nursing decisions</p>
+    <p>The <strong>Code of Ethics for Nurses</strong> (ICN, revised 2021; adapted by INC) defines the moral obligations of nurses. It is built on <strong>four fundamental elements</strong>.</p>
+  </div>
+
+  <div class="section-card">
+    <div class="section-title">Element 1: Nurses & People</div>
+    <p class="section-sub">Primary responsibility is to the patient/community</p>
+    <ul>
+      <li>Nurse's primary professional responsibility is to <strong>people requiring nursing care</strong></li>
+      <li>Promotes an environment where <strong>human rights, values, customs and spiritual beliefs</strong> are respected</li>
+      <li>Ensures patient receives <strong>sufficient information</strong> to give informed consent</li>
+      <li>Maintains <strong>confidentiality</strong> of personal information</li>
+      <li>Shares information appropriately — only with those <strong>professionally involved in care</strong></li>
+      <li>Protects the patient's <strong>right to privacy</strong></li>
+      <li>Nurse should be <strong>sensitive to cultural differences</strong></li>
+      <li>Advocates for equity and social justice in resource distribution</li>
+    </ul>
+    <div class="highlight">
+      <span class="highlight-label">Core Principle</span>
+      The nurse's loyalty is FIRST to the patient — not the institution, not the physician, not the government.
+    </div>
+  </div>
+
+  <div class="section-card teal">
+    <div class="section-title teal">Element 2: Nurses & Practice</div>
+    <p class="section-sub">Accountability for personal nursing practice</p>
+    <ul>
+      <li>Accountable for own nursing practice and maintaining competence</li>
+      <li>Maintains standards of <strong>personal health</strong> to avoid compromising patient care</li>
+      <li>Uses <strong>judgment</strong> in delegating work to others — remains accountable</li>
+      <li>Maintains <strong>dignity and privacy</strong> during care</li>
+      <li>Promotes a culture of <strong>safety</strong> — reports unsafe conditions</li>
+      <li>Adheres to safe practice even in <strong>staff shortage</strong> situations</li>
+      <li>Does NOT engage in practices that are <strong>deceptive, dishonest, or harmful</strong></li>
+      <li>Maintains <strong>nursing competence</strong> through continuous professional development</li>
+    </ul>
+    <div class="exam-alert">
+      <div class="label">⚠ High Yield</div>
+      <p>If a nurse delegates a task to an unqualified person and harm occurs — the NURSE remains accountable. Delegation does not transfer accountability.</p>
+    </div>
+  </div>
+
+  <div class="section-card red">
+    <div class="section-title red">Element 3: Nurses & the Profession</div>
+    <p class="section-sub">Advancing the nursing profession</p>
+    <ul>
+      <li>Plays a major role in defining and maintaining <strong>acceptable standards of practice</strong></li>
+      <li>Actively involved in <strong>developing nursing knowledge</strong> through research</li>
+      <li>Participates in developing and sustaining a <strong>core of professional values</strong></li>
+      <li>Through professional association, nurses participate in <strong>creating a positive work environment</strong></li>
+      <li>Upholds <strong>integrity of the nursing profession</strong></li>
+      <li>Contributes to <strong>evidence-based practice</strong></li>
+      <li>Mentors students and other nurses (professional responsibility)</li>
+    </ul>
+  </div>
+
+  <div class="section-card blue">
+    <div class="section-title blue">Element 4: Nurses & Co-workers</div>
+    <p class="section-sub">Collaborative and professional relationships</p>
+    <ul>
+      <li>Maintains collaborative and respectful relationships with co-workers in nursing and other fields</li>
+      <li>Takes action to safeguard individuals when care is endangered by a <strong>co-worker or any other person</strong></li>
+      <li>Nurses working in this context should have <strong>safeguards in place to protect themselves</strong> for reporting unsafe care</li>
+      <li>Takes appropriate action if another health worker's <strong>conduct is incompetent, unethical, or illegal</strong></li>
+      <li>Supports and guides student nurses (<strong>mentorship</strong>)</li>
+    </ul>
+    <div class="highlight blue">
+      <span class="highlight-label">Key Concept</span>
+      If a co-worker is impaired (alcohol/drugs) or acting unsafely — the nurse has an ETHICAL DUTY to report, not ignore.
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-title">Ethical Theories in Nursing</div>
+    <table>
+      <tr><th>Theory</th><th>Basis</th><th>Nursing Application</th></tr>
+      <tr><td><strong>Deontology</strong></td><td>Duty-based (Kant). Action is right/wrong regardless of outcome.</td><td>Always tell the truth to patient; never lie even if lie seems helpful</td></tr>
+      <tr><td><strong>Utilitarianism</strong></td><td>Greatest good for greatest number (Bentham/Mill). Outcome matters.</td><td>Triage: prioritize who benefits most from treatment</td></tr>
+      <tr><td><strong>Virtue Ethics</strong></td><td>Character-based. Focus on being a good person.</td><td>Compassion, honesty, courage as nursing virtues</td></tr>
+      <tr><td><strong>Care Ethics</strong></td><td>Relationship-based. Emphasize caring relationships.</td><td>Building therapeutic nurse-patient relationship</td></tr>
+      <tr><td><strong>Natural Law</strong></td><td>Moral rules derived from nature/God</td><td>Palliative care vs euthanasia debates</td></tr>
+    </table>
+  </div>
+
+</div>
+
+<!-- ===== PROFESSIONAL CONDUCT ===== -->
+<div class="content" id="tab-conduct">
+
+  <div class="section-card">
+    <div class="section-title">Code of Professional Conduct — Introduction</div>
+    <p class="section-sub">Rules that govern nursing behavior in practice</p>
+    <p>The <strong>Code of Professional Conduct</strong> specifies behavioral standards that all registered nurses must follow. It protects the public, guides the nurse, and maintains trust in the profession.</p>
+    <div class="highlight">
+      <span class="highlight-label">Definition</span>
+      Professional conduct = behavior expected of a nurse in their professional capacity, across all settings of practice.
+    </div>
+  </div>
+
+  <div class="section-card teal">
+    <div class="section-title teal">Core Duties Under Professional Conduct</div>
+    <h3>1. Responsibility to Patients</h3>
+    <ul>
+      <li>Provide safe, competent, and compassionate care at all times</li>
+      <li>Respect the patient's <strong>dignity, privacy, and autonomy</strong></li>
+      <li>Obtain <strong>informed consent</strong> before any procedure</li>
+      <li>Maintain <strong>confidentiality</strong> — do not disclose patient information without consent</li>
+      <li>Act as <strong>patient advocate</strong> — protect patient from harm</li>
+      <li>Report any <strong>adverse events or near misses</strong> honestly</li>
+      <li>Never abandon a patient in need of care (<strong>non-abandonment</strong>)</li>
+    </ul>
+    <h3>2. Responsibility to Self</h3>
+    <ul>
+      <li>Maintain personal <strong>competence and continued education</strong></li>
+      <li>Do not practice while impaired (illness, fatigue, substances)</li>
+      <li>Maintain own <strong>physical and mental health</strong></li>
+      <li>Recognize personal and professional limits — seek help when needed</li>
+    </ul>
+  </div>
+
+  <div class="section-card">
+    <div class="section-title">3. Responsibility to the Profession</div>
+    <ul>
+      <li>Uphold the <strong>reputation and integrity</strong> of the nursing profession</li>
+      <li>Maintain valid <strong>registration</strong> with state nursing council</li>
+      <li>Cooperate with professional body investigations</li>
+      <li>Not engage in conduct that would bring the profession into <strong>disrepute</strong></li>
+      <li>Contribute to <strong>professional development</strong> of colleagues</li>
+      <li>Participate in <strong>research and evidence-based practice</strong></li>
+    </ul>
+    <h3>4. Responsibility to Society</h3>
+    <ul>
+      <li>Promote <strong>public health</strong> and community welfare</li>
+      <li>Participate in health education and <strong>community programs</strong></li>
+      <li>Support national health programs (immunization, RNTCP, etc.)</li>
+      <li>Advocate for <strong>social justice</strong> and equitable healthcare</li>
+      <li>Report <strong>notifiable diseases</strong> as per legal requirement</li>
+    </ul>
+  </div>
+
+  <div class="section-card red">
+    <div class="section-title red">Legal Aspects of Professional Conduct</div>
+    <h3>Acts Governing Nursing in India</h3>
+    <table>
+      <tr><th>Act</th><th>Purpose</th></tr>
+      <tr><td>Indian Nursing Council Act, 1947</td><td>Establishes INC; regulates nursing education</td></tr>
+      <tr><td>State Nursing Council Acts</td><td>Registration of nurses in each state</td></tr>
+      <tr><td>Indian Penal Code (IPC)</td><td>Criminal liability (negligence, assault)</td></tr>
+      <tr><td>Consumer Protection Act, 1986/2019</td><td>Patient as consumer; medical negligence claims</td></tr>
+      <tr><td>Prenatal Diagnostic Techniques Act, 1994</td><td>Prohibition of sex determination</td></tr>
+      <tr><td>Mental Health Act, 2017</td><td>Rights of mentally ill patients</td></tr>
+      <tr><td>Transplantation of Human Organs Act, 1994</td><td>Organ donation and transplantation rules</td></tr>
+    </table>
+  </div>
+
+  <div class="section-card blue">
+    <div class="section-title blue">Documentation & Records</div>
+    <ul>
+      <li>Accurate, complete, and <strong>timely documentation</strong> is a professional duty</li>
+      <li>Never alter or falsify records — <strong>legal and ethical violation</strong></li>
+      <li>Countersigning: supervisor countersigns student nurse notes</li>
+      <li>Medical records are <strong>legal documents</strong> — admissible in court</li>
+      <li>Patient has the right to access their own records</li>
+      <li>Follow hospital policy on <strong>electronic health records (EHR)</strong> confidentiality</li>
+    </ul>
+    <div class="exam-alert">
+      <div class="label">⚠ Exam Focus</div>
+      <p>Falsifying nursing records = misconduct + legal liability. "If it's not documented, it's not done" — standard nursing principle.</p>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-title">Scope of Nursing Practice</div>
+    <p>Defines <strong>what nurses are legally permitted to do</strong>. Varies by education, experience, and certification.</p>
+    <table>
+      <tr><th>Level</th><th>Scope</th></tr>
+      <tr><td>ANM (Auxiliary Nurse Midwife)</td><td>Basic care, maternal-child health, community health</td></tr>
+      <tr><td>GNM (General Nursing & Midwifery)</td><td>All basic nursing + midwifery in hospitals</td></tr>
+      <tr><td>B.Sc Nursing</td><td>All of above + research, teaching, management</td></tr>
+      <tr><td>M.Sc / Post Basic</td><td>Specialization, advanced practice, clinical leadership</td></tr>
+      <tr><td>NP (Nurse Practitioner)</td><td>Advanced clinical decisions (emerging in India)</td></tr>
+    </table>
+    <div class="highlight">
+      <span class="highlight-label">Key Rule</span>
+      Practicing BEYOND your scope = professional misconduct. A GNM cannot perform tasks requiring B.Sc qualification unless supervised.
+    </div>
+  </div>
+
+</div>
+
+<!-- ===== ETHICAL PRINCIPLES ===== -->
+<div class="content" id="tab-principles">
+
+  <div class="section-card">
+    <div class="section-title">The 8 Core Ethical Principles</div>
+    <p class="section-sub">Must-know for every nursing ethics exam</p>
+    <div class="memory-aid">
+      <span class="label">🧠 Memory Aid — ABCDEFGJ</span>
+      <div class="acronym-expand">
+        <span>A</span>utonomy · <span>B</span>eneficence · <span>C</span>onfidentiality · <span>D</span>o No Harm · <span>E</span>quality · <span>F</span>idelity · <span>G</span>ood Faith · <span>J</span>ustice
+      </div>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-title">1. Autonomy</div>
+    <p>The patient's <strong>right to make their own decisions</strong> about their healthcare, free from coercion.</p>
+    <ul>
+      <li>Basis of <strong>informed consent</strong></li>
+      <li>Patient can refuse treatment — nurse must respect this</li>
+      <li>Requires nurse to provide complete, accurate information</li>
+      <li>Nurse must document patient's decision even if nurse disagrees</li>
+      <li>Limited when patient lacks decision-making capacity (unconscious, minors)</li>
+    </ul>
+    <div class="highlight">
+      <span class="highlight-label">Clinical Example</span>
+      Patient refuses blood transfusion on religious grounds (Jehovah's Witness). Nurse must respect autonomy and document refusal, even if disagreeing.
+    </div>
+  </div>
+
+  <div class="section-card teal">
+    <div class="section-title teal">2. Beneficence</div>
+    <p>The duty to <strong>do good</strong> — act in the best interest of the patient.</p>
+    <ul>
+      <li>Every nursing action should <strong>benefit the patient</strong></li>
+      <li>Active promotion of patient's wellbeing</li>
+      <li>Goes beyond just avoiding harm — requires <strong>positive action</strong></li>
+      <li>Basis of therapeutic nursing care</li>
+    </ul>
+    <h3>3. Non-Maleficence</h3>
+    <p>The duty to <strong>do no harm</strong> — "Primum non nocere" (Latin: First, do no harm).</p>
+    <ul>
+      <li>Avoid causing physical, emotional, or financial harm</li>
+      <li>Risk vs. benefit analysis before procedures</li>
+      <li>Reporting medication errors protects patient (non-maleficence)</li>
+      <li>Sometimes conflicts with beneficence (painful treatment for long-term benefit)</li>
+    </ul>
+    <div class="exam-alert">
+      <div class="label">⚠ Common Exam Trick</div>
+      <p>Beneficence = do GOOD. Non-maleficence = avoid HARM. They are different. A nurse giving a painful injection (harm) to cure disease (good) = conflict between the two, resolved by weighing net benefit.</p>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-title">4. Justice</div>
+    <p>Fair, equitable treatment for all patients. Resources are distributed without discrimination.</p>
+    <ul>
+      <li>Equal care regardless of race, religion, gender, socioeconomic status, caste</li>
+      <li>Basis of <strong>triage</strong> (prioritizing by need, not by status)</li>
+      <li>Distributive justice: fair allocation of healthcare resources</li>
+      <li>Procedural justice: fair process in decision making</li>
+    </ul>
+    <div class="highlight">
+      <span class="highlight-label">Clinical Example</span>
+      In ICU with one ventilator and two patients — deciding who gets it based on clinical need (not wealth) = Justice principle.
+    </div>
+  </div>
+
+  <div class="section-card red">
+    <div class="section-title red">5. Fidelity (Faithfulness)</div>
+    <p>Keeping promises and commitments to patients and colleagues.</p>
+    <ul>
+      <li>Following through on commitments made to patients</li>
+      <li>Maintaining <strong>confidentiality</strong> (keeping the trust promise)</li>
+      <li>Not abandoning patients mid-care</li>
+      <li>Basis of therapeutic nurse-patient relationship</li>
+    </ul>
+    <h3>6. Veracity (Truthfulness)</h3>
+    <p>Obligation to tell the truth to patients and colleagues.</p>
+    <ul>
+      <li>Truth-telling even when difficult (bad diagnosis)</li>
+      <li>Basis of <strong>informed consent</strong></li>
+      <li>Deception is an ethical violation</li>
+      <li>Conflict: sometimes truth may harm (→ therapeutic privilege, rarely used)</li>
+    </ul>
+  </div>
+
+  <div class="section-card blue">
+    <div class="section-title blue">7. Confidentiality</div>
+    <p>Patient information shared in professional context must <strong>not be disclosed</strong> without consent.</p>
+    <ul>
+      <li>Protected by both ethics AND law</li>
+      <li>Nurse can share information <strong>only with care team</strong> involved in patient's treatment</li>
+      <li>Exceptions (mandatory disclosure):
+        <ul>
+          <li>Notifiable diseases (TB, cholera, plague, COVID-19)</li>
+          <li>Court order / legal requirement</li>
+          <li>Danger to self or others</li>
+          <li>Child abuse</li>
+        </ul>
+      </li>
+      <li>Social media posts about patients = SEVERE ethical violation</li>
+    </ul>
+    <h3>8. Accountability</h3>
+    <p>Being answerable for one's own nursing actions and decisions.</p>
+    <ul>
+      <li>Cannot be delegated — even if action delegated, <strong>accountability remains</strong></li>
+      <li>Nurse is accountable to: patient, profession, employer, law, self</li>
+      <li>Requires honest error reporting</li>
+    </ul>
+  </div>
+
+  <div class="section-card">
+    <div class="section-title">Ethical Conflicts & Decision-Making</div>
+    <h3>Steps in Ethical Decision Making</h3>
+    <ol>
+      <li>Identify the ethical problem/dilemma</li>
+      <li>Gather all relevant information (medical, legal, social)</li>
+      <li>Identify all people involved (stakeholders)</li>
+      <li>List possible courses of action</li>
+      <li>Apply ethical principles to each option</li>
+      <li>Make a decision — implement and evaluate</li>
+      <li>Document the process</li>
+    </ol>
+    <div class="highlight">
+      <span class="highlight-label">Common Ethical Dilemmas in Nursing</span>
+      Euthanasia · Abortion · Organ harvesting · Resuscitation decisions · Truth-telling in terminal illness · Resource allocation · Research on vulnerable groups
+    </div>
+  </div>
+
+</div>
+
+<!-- ===== VIOLATIONS ===== -->
+<div class="content" id="tab-violations">
+
+  <div class="section-card red">
+    <div class="section-title red">Professional Misconduct — What It Is</div>
+    <p>Behavior that falls below the standard expected of a registered nurse. Can lead to <strong>suspension or removal from nursing register</strong>.</p>
+    <h3>Examples of Misconduct</h3>
+    <ul>
+      <li><strong>Clinical:</strong> Medication errors due to negligence, wrong patient, wrong dose</li>
+      <li><strong>Records:</strong> Falsifying, altering, or destroying patient records</li>
+      <li><strong>Boundaries:</strong> Sexual relationship with patient</li>
+      <li><strong>Substance:</strong> Practicing while under influence of drugs or alcohol</li>
+      <li><strong>Fraud:</strong> Claiming qualifications not held; obtaining registration fraudulently</li>
+      <li><strong>Confidentiality:</strong> Unauthorized disclosure of patient information</li>
+      <li><strong>Abandonment:</strong> Leaving a patient without appropriate handover</li>
+      <li><strong>Criminal:</strong> Conviction for a crime (theft, assault)</li>
+    </ul>
+    <div class="exam-alert">
+      <div class="label">⚠ Exam Focus</div>
+      <p>Misconduct is judged by what a "reasonable nurse" would have done in the same circumstances. Standard = not perfection, but reasonable competence.</p>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-title">Negligence in Nursing</div>
+    <table>
+      <tr><th>Element</th><th>Meaning</th><th>Example</th></tr>
+      <tr><td><strong>Duty</strong></td><td>Nurse had professional responsibility to patient</td><td>Assigned nurse for the shift</td></tr>
+      <tr><td><strong>Breach</strong></td><td>Nurse failed to meet standard of care</td><td>Did not check allergy before giving drug</td></tr>
+      <tr><td><strong>Causation</strong></td><td>Breach directly caused the harm</td><td>Allergic reaction occurred</td></tr>
+      <tr><td><strong>Damage</strong></td><td>Patient suffered actual harm</td><td>Anaphylaxis, hospitalization</td></tr>
+    </table>
+    <p>All 4 elements must be present to prove negligence. Missing any one = not legally negligent (may still be ethical violation).</p>
+    <h3>Types of Negligence</h3>
+    <ul>
+      <li><strong>Civil Negligence</strong> — Patient sues for compensation</li>
+      <li><strong>Criminal Negligence</strong> — Gross neglect; IPC Section 304A applies</li>
+      <li><strong>Professional Negligence (Malpractice)</strong> — Below standard by professional</li>
+    </ul>
+  </div>
+
+  <div class="section-card teal">
+    <div class="section-title teal">Informed Consent — Detailed</div>
+    <ul>
+      <li>Must be <strong>voluntary</strong> (no coercion or undue influence)</li>
+      <li>Patient must be <strong>competent</strong> (legally and mentally)</li>
+      <li>Must be <strong>informed</strong> — full information about procedure, risks, alternatives</li>
+      <li>Written consent for invasive procedures, surgeries, research</li>
+      <li>Verbal consent for routine care (BP check, IV insertion)</li>
+    </ul>
+    <h3>Who Can Give Consent?</h3>
+    <ul>
+      <li>Adult (≥18 yrs) with decision-making capacity — gives own consent</li>
+      <li>Minor (below 18) — parent or legal guardian</li>
+      <li>Unconscious/incapacitated — next of kin / legal guardian</li>
+      <li>Emergency — implied consent (assumed patient would consent to life-saving care)</li>
+    </ul>
+    <div class="highlight teal">
+      <span class="highlight-label">Special Cases</span>
+      Mentally ill patients (Mental Health Act 2017): if voluntarily admitted, they consent. If involuntarily admitted, nominated representative or family gives consent.
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-title">Patient Rights (Bill of Rights)</div>
+    <ul>
+      <li>Right to <strong>information</strong> about their condition and treatment</li>
+      <li>Right to <strong>informed consent</strong> and to refuse treatment</li>
+      <li>Right to <strong>confidentiality</strong> and privacy</li>
+      <li>Right to <strong>dignified and respectful</strong> care</li>
+      <li>Right to <strong>second opinion</strong></li>
+      <li>Right to access <strong>medical records</strong></li>
+      <li>Right to <strong>complain</strong> and seek redress</li>
+      <li>Right to emergency care (even without advance payment)</li>
+    </ul>
+    <div class="exam-alert">
+      <div class="label">⚠ Important</div>
+      <p>The Supreme Court of India has ruled that the right to health is part of the right to life under Article 21 of the Constitution.</p>
+    </div>
+  </div>
+
+  <div class="section-card blue">
+    <div class="section-title blue">Whistleblowing in Nursing</div>
+    <p>Reporting unsafe practices or misconduct by a colleague, superior, or institution.</p>
+    <ul>
+      <li>Ethically REQUIRED if patient safety is at risk</li>
+      <li>Nurse has a duty to report — not just an option</li>
+      <li>Internal reporting first (charge nurse → nursing officer → administration)</li>
+      <li>External reporting if internal fails (State Nursing Council, regulatory body)</li>
+      <li>Nurse is protected from retaliation under professional ethics (though Indian laws are weaker on this vs. Western countries)</li>
+    </ul>
+  </div>
+
+  <div class="section-card">
+    <div class="section-title">Euthanasia — Ethical Dimensions</div>
+    <table>
+      <tr><th>Type</th><th>Definition</th><th>Legal Status in India</th></tr>
+      <tr><td>Active Euthanasia</td><td>Deliberately ending life (lethal injection)</td><td>ILLEGAL (murder under IPC)</td></tr>
+      <tr><td>Passive Euthanasia</td><td>Withdrawing life support</td><td>LEGAL (SC ruling 2018 — Aruna Shanbaug case)</td></tr>
+      <tr><td>Voluntary Euthanasia</td><td>Patient requests death</td><td>Not legally recognized</td></tr>
+      <tr><td>Involuntary Euthanasia</td><td>Without patient consent</td><td>ILLEGAL</td></tr>
+      <tr><td>Physician-Assisted Suicide</td><td>Doctor prescribes lethal dose</td><td>ILLEGAL</td></tr>
+    </table>
+    <div class="highlight">
+      <span class="highlight-label">Landmark Case</span>
+      Aruna Shanbaug Case (2011/2018) — Supreme Court of India legalized passive euthanasia with safeguards. Advance directives ("living will") were recognized.
+    </div>
+  </div>
+
+</div>
+
+<!-- ===== MCQ ===== -->
+<div class="content" id="tab-mcq">
+
+  <div class="section-card">
+    <div class="section-title">Practice MCQs — Exam Style</div>
+    <p class="section-sub">Click each question to reveal the answer</p>
+  </div>
+
+  <div id="mcq-container"></div>
+
+</div>
+
+<script>
+  // TAB SYSTEM
+  function showTab(id) {
+    document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + id).classList.add('active');
+    event.target.classList.add('active');
+  }
+
+  // MCQ DATA
+  const mcqs = [
+    {
+      q: "The primary professional responsibility of a nurse according to INC Code of Ethics is to:",
+      options: ["A) The hospital administration", "B) The physician in charge", "C) People requiring nursing care", "D) The nursing profession"],
+      ans: "C",
+      exp: "The INC/ICN Code of Ethics clearly states the nurse's primary responsibility is to people requiring nursing care — not the institution or physician."
+    },
+    {
+      q: "A nurse discovers that a colleague is administering incorrect medication. According to Code of Ethics (Element 4), the nurse should:",
+      options: ["A) Ignore it to maintain team harmony", "B) Report it to protect patient safety", "C) Wait and watch if harm occurs", "D) Tell the patient's family first"],
+      ans: "B",
+      exp: "Element 4 (Nurses & Co-workers) obligates nurses to take action when patient care is endangered by a colleague's actions."
+    },
+    {
+      q: "A patient refuses a blood transfusion for religious reasons. The nurse should:",
+      options: ["A) Administer it anyway as it is life-saving", "B) Contact family to override the decision", "C) Respect autonomy and document the refusal", "D) Sedate the patient and administer"],
+      ans: "C",
+      exp: "Autonomy = patient's right to make informed decisions. A competent adult's refusal must be respected and documented, even if the nurse disagrees."
+    },
+    {
+      q: "Which ethical principle is violated when a nurse discloses a patient's HIV status to the patient's employer?",
+      options: ["A) Beneficence", "B) Justice", "C) Fidelity", "D) Confidentiality"],
+      ans: "D",
+      exp: "Confidentiality prohibits sharing patient information without consent. HIV status is particularly protected. Disclosure to employer (without consent or legal mandate) is a clear violation."
+    },
+    {
+      q: "The Indian Nursing Council was constituted under which Act?",
+      options: ["A) Nurses Act 1949", "B) Indian Nursing Council Act 1947", "C) Medical Council Act 1956", "D) Health Professions Act 1950"],
+      ans: "B",
+      exp: "INC was established under the Indian Nursing Council Act 1947 and was constituted (operationalized) in 1949."
+    },
+    {
+      q: "Which of the following is NOT a required element to prove nursing negligence legally?",
+      options: ["A) Duty", "B) Breach", "C) Causation", "D) Intent"],
+      ans: "D",
+      exp: "The 4 elements of negligence are: Duty, Breach, Causation, Damage. Intent is NOT required — negligence is about carelessness, not deliberate wrongdoing."
+    },
+    {
+      q: "'Primum non nocere' refers to which ethical principle?",
+      options: ["A) Beneficence", "B) Justice", "C) Non-maleficence", "D) Autonomy"],
+      ans: "C",
+      exp: "'Primum non nocere' = 'First, do no harm' = Non-maleficence. Classic exam phrase — must remember."
+    },
+    {
+      q: "A nurse delegates wound dressing to an unqualified ward helper. The patient develops infection. Who is accountable?",
+      options: ["A) The ward helper only", "B) The hospital administration", "C) The nurse who delegated", "D) The charge nurse"],
+      ans: "C",
+      exp: "Accountability cannot be delegated. The nurse who delegated the task to an unqualified person remains accountable for the outcome."
+    },
+    {
+      q: "Passive euthanasia was legalized in India by:",
+      options: ["A) Consumer Protection Act 2019", "B) Mental Health Act 2017", "C) Supreme Court ruling in Aruna Shanbaug case", "D) Indian Nursing Council Act"],
+      ans: "C",
+      exp: "The Supreme Court of India legalized passive euthanasia through the Aruna Shanbaug case ruling (2011 initial, confirmed 2018) — allowing withdrawal of life support under strict conditions."
+    },
+    {
+      q: "Informed consent is NOT required for which of the following?",
+      options: ["A) Surgical procedure", "B) Blood transfusion", "C) Emergency life-saving treatment in unconscious patient", "D) Participation in research"],
+      ans: "C",
+      exp: "In emergencies where the patient is unconscious and life is at immediate risk — implied consent operates. The nurse/doctor is ethically justified in proceeding with treatment to save life."
+    },
+    {
+      q: "Distributing ICU beds fairly based on clinical need is an example of:",
+      options: ["A) Autonomy", "B) Beneficence", "C) Justice", "D) Fidelity"],
+      ans: "C",
+      exp: "Justice = fairness and equitable distribution of resources based on need, not social status, wealth, or identity. Classic triage scenario."
+    },
+    {
+      q: "A nurse promising a patient 'I will check on you every hour' and then doing so is an example of:",
+      options: ["A) Veracity", "B) Fidelity", "C) Autonomy", "D) Justice"],
+      ans: "B",
+      exp: "Fidelity = faithfulness; keeping promises made to patients. Veracity = truthfulness. Both are important but this scenario = Fidelity."
+    }
+  ];
+
+  // RENDER MCQs
+  const container = document.getElementById('mcq-container');
+  mcqs.forEach((mcq, i) => {
+    const card = document.createElement('div');
+    card.style.cssText = 'background:#1a2d47;border:1px solid rgba(201,168,76,0.25);border-radius:8px;padding:20px;margin-bottom:16px;';
+    card.innerHTML = `
+      <div style="font-family:JetBrains Mono,monospace;font-size:10px;color:#8fa3b8;letter-spacing:2px;margin-bottom:8px;">Q ${String(i+1).padStart(2,'0')}</div>
+      <p style="font-size:15px;color:#e8e4d8;margin-bottom:14px;font-weight:600;">${mcq.q}</p>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:14px;">
+        ${mcq.options.map(o => `<div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:4px;padding:8px 12px;font-size:14px;color:#b0c4d8;cursor:pointer;">${o}</div>`).join('')}
+      </div>
+      <button onclick="revealAns(this, '${mcq.ans}', \`${mcq.exp.replace(/`/g, "'")}\`)" style="background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.35);color:#c9a84c;font-family:JetBrains Mono,monospace;font-size:11px;letter-spacing:1px;padding:8px 16px;border-radius:4px;cursor:pointer;text-transform:uppercase;">Reveal Answer</button>
+      <div class="ans-reveal" style="display:none;margin-top:12px;background:rgba(46,184,164,0.1);border:1px solid rgba(46,184,164,0.3);border-radius:6px;padding:12px;"></div>
+    `;
+    container.appendChild(card);
+  });
+
+  function revealAns(btn, ans, exp) {
+    const reveal = btn.nextElementSibling;
+    reveal.style.display = 'block';
+    reveal.innerHTML = `<span style="font-family:JetBrains Mono,monospace;font-size:10px;color:#2eb8a4;letter-spacing:2px;">CORRECT ANSWER: ${ans}</span><p style="margin-top:6px;font-size:14px;color:#e8e4d8;">${exp}</p>`;
+    btn.style.display = 'none';
+  }
+</script>
+</body>
+</html>
